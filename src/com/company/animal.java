@@ -5,6 +5,19 @@ public class animal {
     private int age;
     private int high;
 
+    // для конструктора @owerrite не пишется
+    public animal (){
+        System.out.println("animal was created");
+    }
+    public animal (int age){
+        this.setAge(age);
+    }
+    public animal (int age,String color){
+        // this () - вызов конструктора (ОБЯЗАТЕЛЬНО в ПЕРВОЙ СТРОЧКЕ конструктора)
+        this(age);
+        this.color=color;
+    }
+
     public int getHigh() {
         return high;
     }
@@ -26,5 +39,7 @@ public class animal {
     public int getAge () {
         return this.age;
     }
+    // super - в java это ссылка на родительский экземпляр объекта класса.
+
 
 }
